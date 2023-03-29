@@ -28,7 +28,7 @@ class _LoginPageState extends State<Login_page> {
                 borderRadius: BorderRadius.all(Radius.circular(15.0)),
                 image: DecorationImage(
                   image: AssetImage(
-                    "images/logo2.png"
+                    "images/logo.png"
                   ),
                  fit: BoxFit.cover
                 )

@@ -28,7 +28,7 @@ class _LoginPageState extends State<Login_page> {
                 borderRadius: BorderRadius.all(Radius.circular(15.0)),
                 image: DecorationImage(
                   image: AssetImage(
-                    "images/logo.png"
+                    "images/logo2.png"
                   ),
                  fit: BoxFit.cover
                 )
@@ -157,9 +157,13 @@ class _LoginPageState extends State<Login_page> {
                 ),
               ),
             ),
-           SizedBox(height: 110,
+           SizedBox(height: 10,
            ),
+            /*Container(
+             child: Center(
 
+             ),
+            ),*/
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [

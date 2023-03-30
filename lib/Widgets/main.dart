@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mama_fua_app/Widgets/splashscreen.dart';
-import 'package:mama_fua_app/Models/dry_cleaning.dart';
-import 'package:mama_fua_app/Pages/login.dart';
-import 'package:mama_fua_app/Pages/signup_page.dart';
-//import 'package:';
+
 void main() {
   runApp(const MyApp());
 }
@@ -18,7 +15,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: SplashScreen()
+      home: const SplashScreen()
     );
   }
 }

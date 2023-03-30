@@ -19,6 +19,7 @@ class _dashboardState extends State<dashboard> {
         child: Text('Welcome to the Dashboard'),
       ),
       floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.lightBlueAccent,
         onPressed: () {
           Navigator.push(
             context,

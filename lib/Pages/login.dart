@@ -13,6 +13,11 @@ class Login_page extends StatefulWidget {
 class _LoginPageState extends State<Login_page> {
   @override
   Widget build(BuildContext context) {
+    List images = [
+     /* "f.png"
+      "g.png"
+      "t.jpg"*/
+    ];
     double w = MediaQuery.of(context).size.width;
         double h = MediaQuery.of(context).size.height;
     return Scaffold(
@@ -159,10 +164,33 @@ class _LoginPageState extends State<Login_page> {
             ),
            SizedBox(height: 10,
            ),
-            /*Container(
-             child: Center(
+            RichText(text: TextSpan(
+              text: "Or sign up with",
+              style: TextStyle(
+                color: Colors.grey,
+                fontSize: 15
+              ),
 
-             ),
+            )),
+            /*Row(
+              children: [
+                Wrap(
+                  children: List<Widget>.generate(3,
+                          (index){
+                    return CircleAvatar(
+                      radius: 30,
+                      backgroundColor: Colors.grey,
+                      child: CircleAvatar(
+                        radius: 25,
+                        backgroundImage: AssetImage(
+                          "images/"+images[index]
+                        ),
+                      ),
+                    );
+                  }
+                  ),
+                ),
+              ],
             ),*/
             Row(
               mainAxisAlignment: MainAxisAlignment.center,

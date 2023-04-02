@@ -165,9 +165,9 @@ class _LoginPageState extends State<Login_page> {
            SizedBox(height: 10,
            ),
             RichText(text: TextSpan(
-              text: "Or sign up with",
+              text: "Or, sign up with",
               style: TextStyle(
-                color: Colors.grey,
+                color: Colors.black,
                 fontSize: 15
               ),
 
@@ -195,6 +195,7 @@ class _LoginPageState extends State<Login_page> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
+
                 const Text("Don't have an account?"),
                 TextButton(
                   onPressed: () {

@@ -114,7 +114,7 @@ class dry_cleaning extends StatelessWidget {
                             children: <Widget>[
                                 _customCard(
 
-                                    imageUrl: "dress.png", item: "T-shirt", price: "\$0.50", count: 5
+                                    imageUrl: "dress1.png", item: "T-shirt", price: "\$0.50", count: 5
                                 ),
                                 _customCard(
                                     imageUrl: "tshirt.png", item: "Shirt", price: "\$0.50", count: 5
@@ -233,6 +233,8 @@ List<list> categoryData = [
 ];*/
 import 'package:flutter/material.dart';
 
+import '../Pages/dashboard.dart';
+
 class dry_cleaning extends StatelessWidget {
   const dry_cleaning({Key? key}) : super(key: key);
 
@@ -272,9 +274,9 @@ class dry_cleaning extends StatelessWidget {
             child: Text(
               "What service do you need?",
               style: TextStyle(
-                 color: Colors.deepPurple,
-                  fontSize: 30,
-                  fontWeight: FontWeight.normal
+                 color: Colors.black,
+                  fontSize: 35,
+                  fontWeight: FontWeight.bold
               ),
             ),
           ),
@@ -285,16 +287,35 @@ class dry_cleaning extends StatelessWidget {
             scrollDirection: Axis.horizontal,
             child: Row(
               children: [
+               /* ElevatedButton(
+                  style: TextButton.styleFrom(
+                    backgroundColor: Colors.white,
+                    elevation: 5,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(30.0)),
+                    minimumSize: Size(10, 5),
+                    foregroundColor: Colors.black,
+                  ),
+                  onPressed: (){
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => dashboard()),
+                  );
+                }, child:
                 horizontalItems(
-                    Colors.greenAccent.withOpacity(0.8),  "TOPS"),
+                    Colors.white.withOpacity(0.8),  "TOPS"),
+                ),*/
                 horizontalItems(
-                    Colors.greenAccent.withOpacity(0.8),  "BOTTOMS"),
+                    Colors.white.withOpacity(0.8),  "TOPS"),
                 horizontalItems(
-                    Colors.greenAccent.withOpacity(0.5),  "DRESSES"),
+                    Colors.white.withOpacity(0.8),  "BOTTOMS"),
                 horizontalItems(
-                    Colors.greenAccent.withOpacity(0.5),  "COATS"),
+                    Colors.white.withOpacity(0.5),  "DRESSES"),
                 horizontalItems(
-                    Colors.greenAccent.withOpacity(0.5),  "SUITS"),
+                    Colors.white.withOpacity(0.5),  "COATS"),
+                horizontalItems(
+                    Colors.white.withOpacity(0.5),  "SUITS"),
               ],
             ),
           ),
@@ -306,14 +327,24 @@ class dry_cleaning extends StatelessWidget {
             child: Row(
               children: [
                 products("tshirt.jpg", "T-Shirt",  100, 5),
-                products("bottom.png", "Men Official", 400,  5),
-                products("dress1.png", "Dress",  150, 5),
-                products("jacket.png", "Men Boots",   400,5),
-                products("suit.png", "Nike Airforce",  400, 5),
+                products("trouser.png", "Trouser", 150,  5),
+                products("dress1.png", "Dress",  200, 5),
+                products("jacket.png", "Jacket",   250,5),
+                products("suit1.png", "Suit",  500, 5),
               ],
             ),
           )
         ],
+      ),
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.lightBlueAccent,
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => dashboard()),
+          );
+        },
+        child: Icon(Icons.dashboard_customize_outlined),
       ),
     );
   }

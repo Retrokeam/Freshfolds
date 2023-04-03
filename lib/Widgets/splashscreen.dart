@@ -1,5 +1,5 @@
 import 'dart:async';
-import 'package:mama_fua_app/Pages/login.dart';
+import 'package:mama_fua_app/Pages/landingpage.dart';
 import 'package:flutter/material.dart';
 
 
@@ -18,7 +18,7 @@ class _SplashScreenState extends State<SplashScreen> {
         const Duration(seconds: 5),
             () =>
             Navigator.of(context).pushReplacement(MaterialPageRoute(
-                builder: (BuildContext context) => const Login_page())));
+                builder: (BuildContext context) => const Landing())));
   }
 
   @override

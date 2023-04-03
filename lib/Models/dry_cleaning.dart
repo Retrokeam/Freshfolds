@@ -258,7 +258,7 @@ class dry_cleaning extends StatelessWidget {
                       "Hi Jay,",
                       style: TextStyle(
                           fontSize: 20,
-                          fontWeight: FontWeight.normal
+                          fontWeight: FontWeight.w400
                       ),
                     ),
                   ),
@@ -276,7 +276,7 @@ class dry_cleaning extends StatelessWidget {
               style: TextStyle(
                  color: Colors.black,
                   fontSize: 35,
-                  fontWeight: FontWeight.bold
+                  fontWeight: FontWeight.w600
               ),
             ),
           ),

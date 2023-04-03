@@ -60,6 +60,211 @@ class _dashboardState extends State<dashboard> {
                 style: TextStyle(color: Colors.black),
               ),
             ),
+            Text(
+             "BROWSE",
+              style: TextStyle(
+                fontSize: 15,
+                fontWeight: FontWeight.normal
+            ),
+            ),
+            SizedBox(height: 15,),
+            Padding(
+              padding: const EdgeInsets.only(left: 20),
+              child: Divider(
+                color: Colors.white,
+                height: 1,
+              ),
+            ),
+            Stack(
+              children: [
+                Positioned(
+                  height: 56,
+                  width: 288,
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.all(Radius.circular(10))
+                    ),
+                  ),
+                ),
+                ListTile(
+                  onTap: (){
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => dashboard()),
+                    );
+                  },
+                  leading: SizedBox(
+                    height: 34,
+                    width: 34,
+                    child: Icon(
+                      Icons.home_outlined,
+                      color: Colors.blue,
+                    ),
+                  ),
+                  title: Text(
+                    "Home",
+                    style: TextStyle(color: Colors.black),
+                  ),
+                ),
+              ],
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 20),
+              child: Divider(
+                color: Colors.white,
+                height: 1,
+              ),
+            ),
+            Stack(
+              children: [
+                Positioned(
+                  height: 56,
+                  width: 288,
+                  child: Container(
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.all(Radius.circular(10))
+                    ),
+                  ),
+                ),
+                ListTile(
+                  onTap: (){},
+                  leading: SizedBox(
+                    height: 34,
+                    width: 34,
+                    child: Icon(
+                      Icons.star_border_sharp,
+                      color: Colors.blue,
+                    ),
+                  ),
+                  title: Text(
+                    "Favorites",
+                    style: TextStyle(color: Colors.black),
+                  ),
+                ),
+              ],
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 20),
+              child: Divider(
+                color: Colors.white,
+                height: 1,
+              ),
+            ),
+            Stack(
+              children: [
+                Positioned(
+                  height: 56,
+                  width: 288,
+                  child: Container(
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.all(Radius.circular(10))
+                    ),
+                  ),
+                ),
+                ListTile(
+                  onTap: (){},
+                  leading: SizedBox(
+                    height: 34,
+                    width: 34,
+                    child: Icon(
+                      Icons.help_outline_sharp,
+                      color: Colors.blue,
+                    ),
+                  ),
+                  title: Text(
+                    "Help",
+                    style: TextStyle(color: Colors.black),
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(height: 20,),
+            Padding(
+              padding: const EdgeInsets.only(left: 0),
+              child: Text(
+                "HISTORY",
+                style: TextStyle(
+                    fontSize: 15,
+                    fontWeight: FontWeight.normal
+                ),
+              ),
+            ),
+            SizedBox(height: 15,),
+            Padding(
+              padding: const EdgeInsets.only(left: 20),
+              child: Divider(
+                color: Colors.white,
+                height: 1,
+              ),
+            ),
+            Stack(
+              children: [
+                Positioned(
+                  height: 56,
+                  width: 288,
+                  child: Container(
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.all(Radius.circular(10))
+                    ),
+                  ),
+                ),
+                ListTile(
+                  onTap: (){},
+                  leading: SizedBox(
+                    height: 34,
+                    width: 34,
+                    child: Icon(
+                      Icons.history_rounded,
+                      color: Colors.blue,
+                    ),
+                  ),
+                  title: Text(
+                    "History",
+                    style: TextStyle(color: Colors.black),
+                  ),
+                ),
+              ],
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 20),
+              child: Divider(
+                color: Colors.white,
+                height: 1,
+              ),
+            ),
+            Stack(
+              children: [
+                Positioned(
+                  height: 56,
+                  width: 288,
+                  child: Container(
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.all(Radius.circular(10))
+                    ),
+                  ),
+                ),
+                ListTile(
+                  onTap: (){},
+                  leading: SizedBox(
+                    height: 34,
+                    width: 34,
+                    child: Icon(
+                      Icons.notifications_none_rounded,
+                      color: Colors.blue,
+                    ),
+                  ),
+                  title: Text(
+                    "Notifications",
+                    style: TextStyle(color: Colors.black),
+                  ),
+                ),
+              ],
+            ),
           ],
           ),
         ),
@@ -90,7 +295,7 @@ class _dashboardState extends State<dashboard> {
         onPressed: () {
           Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => Pay()),
+            MaterialPageRoute(builder: (context) => dry_cleaning()),
           );
         },
         child: Icon(Icons.dry_cleaning_rounded),

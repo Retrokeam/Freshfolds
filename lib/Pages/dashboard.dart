@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mama_fua_app/Models/dry_cleaning.dart';
+import 'package:mama_fua_app/Pages/login.dart';
 import 'package:mama_fua_app/Pages/payment.dart';
 
 class dashboard extends StatefulWidget {
@@ -43,6 +44,7 @@ class _dashboardState extends State<dashboard> {
         backgroundColor: Colors.lightBlue,
         child: SafeArea(
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             ListTile(
               leading: CircleAvatar(
@@ -60,12 +62,20 @@ class _dashboardState extends State<dashboard> {
                 style: TextStyle(color: Colors.black),
               ),
             ),
-            Text(
-             "BROWSE",
-              style: TextStyle(
-                fontSize: 15,
-                fontWeight: FontWeight.normal
-            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 15),
+              child: Row(
+                //crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                   "BROWSE",
+                    style: TextStyle(
+                      fontSize: 15,
+                      fontWeight: FontWeight.normal
+                  ),
+                  ),
+                ],
+              ),
             ),
             SizedBox(height: 15,),
             Padding(
@@ -79,7 +89,7 @@ class _dashboardState extends State<dashboard> {
               children: [
                 Positioned(
                   height: 56,
-                  width: 288,
+                  width: 250,
                   child: Container(
                     decoration: BoxDecoration(
                       color: Colors.white,
@@ -120,7 +130,7 @@ class _dashboardState extends State<dashboard> {
               children: [
                 Positioned(
                   height: 56,
-                  width: 288,
+                  width: 250,
                   child: Container(
                     decoration: BoxDecoration(
                         color: Colors.white,
@@ -156,7 +166,48 @@ class _dashboardState extends State<dashboard> {
               children: [
                 Positioned(
                   height: 56,
-                  width: 288,
+                  width: 250,
+                  child: Container(
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.all(Radius.circular(10))
+                    ),
+                  ),
+                ),
+                ListTile(
+                  onTap: (){
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Pay()),
+                    );
+                  },
+                  leading: SizedBox(
+                    height: 34,
+                    width: 34,
+                    child: Icon(
+                      Icons.payment_outlined,
+                      color: Colors.blue,
+                    ),
+                  ),
+                  title: Text(
+                    "Pay Now",
+                    style: TextStyle(color: Colors.black),
+                  ),
+                ),
+              ],
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 20),
+              child: Divider(
+                color: Colors.white,
+                height: 1,
+              ),
+            ),
+            Stack(
+              children: [
+                Positioned(
+                  height: 56,
+                  width: 250,
                   child: Container(
                     decoration: BoxDecoration(
                         color: Colors.white,
@@ -183,13 +234,17 @@ class _dashboardState extends State<dashboard> {
             ),
             SizedBox(height: 20,),
             Padding(
-              padding: const EdgeInsets.only(left: 0),
-              child: Text(
-                "HISTORY",
-                style: TextStyle(
-                    fontSize: 15,
-                    fontWeight: FontWeight.normal
-                ),
+              padding: const EdgeInsets.symmetric(horizontal: 15),
+              child: Row(
+                children: [
+                  Text(
+                    "HISTORY",
+                    style: TextStyle(
+                        fontSize: 15,
+                        fontWeight: FontWeight.normal
+                    ),
+                  ),
+                ],
               ),
             ),
             SizedBox(height: 15,),
@@ -204,7 +259,7 @@ class _dashboardState extends State<dashboard> {
               children: [
                 Positioned(
                   height: 56,
-                  width: 288,
+                  width: 250,
                   child: Container(
                     decoration: BoxDecoration(
                         color: Colors.white,
@@ -240,7 +295,7 @@ class _dashboardState extends State<dashboard> {
               children: [
                 Positioned(
                   height: 56,
-                  width: 288,
+                  width: 250,
                   child: Container(
                     decoration: BoxDecoration(
                         color: Colors.white,
@@ -260,6 +315,47 @@ class _dashboardState extends State<dashboard> {
                   ),
                   title: Text(
                     "Notifications",
+                    style: TextStyle(color: Colors.black),
+                  ),
+                ),
+              ],
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 20),
+              child: Divider(
+                color: Colors.white,
+                height: 1,
+              ),
+            ),
+            Stack(
+              children: [
+                Positioned(
+                  height: 56,
+                  width: 250,
+                  child: Container(
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.all(Radius.circular(10))
+                    ),
+                  ),
+                ),
+                ListTile(
+                  onTap: (){
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Login_page())
+                    );
+                  },
+                  leading: SizedBox(
+                    height: 34,
+                    width: 34,
+                    child: Icon(
+                      Icons.logout_outlined,
+                      color: Colors.blue,
+                    ),
+                  ),
+                  title: Text(
+                    "Logout",
                     style: TextStyle(color: Colors.black),
                   ),
                 ),

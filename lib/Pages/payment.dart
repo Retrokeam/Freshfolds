@@ -23,17 +23,19 @@ class _PayState extends State<Pay> {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              const Text("Card Form",
-                style: TextStyle(fontWeight: FontWeight.bold,color: Colors.black),
+              const Text("Proceed To Pay",
+                style: TextStyle(fontSize: 20,
+                    fontWeight: FontWeight.bold,color: Colors.black),
               ),
               //Spacer(),
               const SizedBox(height: 20,),
               Form(
                 child: Column(
                   children: [
+                    SizedBox(height: 5,),
                     Padding(
                       padding: const EdgeInsets.all(8.0),
-                      child: TextFormField(
+                      child: TextField(
                         controller: cardNumberController,
                         keyboardType:TextInputType.number,
                         inputFormatters: [
@@ -46,63 +48,94 @@ class _PayState extends State<Pay> {
                         ),
                       ),
                     ),
+                    SizedBox(height: 25,),
                     Padding(
                       padding: const EdgeInsets.all(8.0),
-                      child: TextFormField(
+                      child: TextField(
                         decoration: const InputDecoration(
                           hintText: "Full Name",
                           prefixIcon: Padding(
                             padding: EdgeInsets.symmetric(vertical: 10),
                             child: Icon(Icons.account_circle_rounded),
                           )
-
                         ),
                       ),
                     ),
-                    Row(
-                      children: [
-                        Expanded(
-                          child: TextFormField(
-                            keyboardType: TextInputType.number,
-                            inputFormatters: [
-                              FilteringTextInputFormatter.digitsOnly,
-                              LengthLimitingTextInputFormatter(4),
-                            ],
-                            decoration: InputDecoration(
-                              hintText: "CVV",
-                              prefixIcon: Padding(
-                                padding: const EdgeInsets.symmetric(vertical: 10),
-                                child: Icon(Icons.card_membership_outlined),
+                    SizedBox(height: 25,),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Row(
+                        children: [
+                          Expanded(
+                            child: TextField(
+                              keyboardType: TextInputType.number,
+                              inputFormatters: [
+                                FilteringTextInputFormatter.digitsOnly,
+                                LengthLimitingTextInputFormatter(4),
+                              ],
+                              decoration: InputDecoration(
+                                hintText: "CVV",
+                                prefixIcon: Padding(
+                                  padding: const EdgeInsets.symmetric(vertical: 10),
+                                  child: Icon(Icons.card_membership_outlined),
+                                ),
                               ),
                             ),
                           ),
-                        ),
-                        SizedBox(width: 5,),
-                        Expanded(
-                          child: TextFormField(
-                            keyboardType: TextInputType.number,
-                            inputFormatters: [
-                              FilteringTextInputFormatter.digitsOnly,
-                              LengthLimitingTextInputFormatter(4),
-                              CardMonthInputFormatter(),
-                            ],
-                            decoration: InputDecoration(
-                              hintText: "MM/YY",
-                              prefixIcon: Padding(
-                                padding: const EdgeInsets.symmetric(vertical: 10),
-                                child: Icon(Icons.calendar_month_outlined),
+                          SizedBox(width: 5,),
+                          Expanded(
+                            child: TextFormField(
+                              keyboardType: TextInputType.number,
+                              inputFormatters: [
+                                FilteringTextInputFormatter.digitsOnly,
+                                LengthLimitingTextInputFormatter(4),
+                                CardMonthInputFormatter(),
+                              ],
+                              decoration: InputDecoration(
+                                hintText: "MM/YY",
+                                prefixIcon: Padding(
+                                  padding: const EdgeInsets.symmetric(vertical: 10),
+                                  child: Icon(Icons.calendar_month_outlined),
+                                ),
                               ),
                             ),
                           ),
+                        ],
+                      ),
+                    ),
+                    SizedBox(height: 25,),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: TextField(
+                        keyboardType:TextInputType.number,
+                        inputFormatters: [
+                          FilteringTextInputFormatter.digitsOnly,
+                          LengthLimitingTextInputFormatter(6),
+                        ],
+                        decoration: const InputDecoration(
+                            hintText: "Enter amount",
+                            prefixIcon: Icon(Icons.money_off_csred_outlined)
                         ),
-                      ],
+                      ),
                     ),
                   ],
                 ),),
+              SizedBox(height: 25,),
               Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: ElevatedButton(onPressed: (){},
-                    child: const Text("Pay")
+                child: ElevatedButton(
+                    style: TextButton.styleFrom(
+                      backgroundColor: Colors.lightBlueAccent,
+                      elevation: 5,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(30.0)),
+                      minimumSize: Size(250, 40),
+                      foregroundColor: Colors.black,
+                    ),
+                    onPressed: (){},
+                    child: const Text("Pay",
+                      style: TextStyle(fontSize: 20),
+                    )
                 ),
               ),
             ],

@@ -164,34 +164,47 @@ class _LoginPageState extends State<Login_page> {
             ),
            SizedBox(height: 10,
            ),
-            RichText(text: TextSpan(
-              text: "Or, sign up with",
-              style: TextStyle(
-                color: Colors.black,
-                fontSize: 15
-              ),
-
-            )),
-            /*Row(
-              children: [
-                Wrap(
-                  children: List<Widget>.generate(3,
-                          (index){
-                    return CircleAvatar(
-                      radius: 30,
-                      backgroundColor: Colors.grey,
-                      child: CircleAvatar(
-                        radius: 25,
-                        backgroundImage: AssetImage(
-                          "images/"+images[index]
-                        ),
-                      ),
-                    );
-                  }
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 25.0),
+              child: Row(
+                children: [
+                  Expanded(
+                    child: Divider(
+                      thickness: 1,
+                      color: Colors.grey,
+                    ),
                   ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                    child: Text(
+                      "Or, continue with"
+                    ),
+                  ),
+                  Expanded(
+                    child: Divider(
+                      thickness: 1,
+                      color: Colors.grey,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(height: 30,),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Image.asset("images/g.png",
+                  height: 30,
+                ),
+                Image.asset("images/f.png",
+                  height: 30,
+                ),
+                Image.asset("images/g.png",
+                  height: 30,
                 ),
               ],
-            ),*/
+            ),
+            SizedBox(height: 40,),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
